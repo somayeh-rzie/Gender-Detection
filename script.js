@@ -30,7 +30,7 @@ function search(){
       document.getElementById("g").textContent = localStorage.getItem(uname);
     // }else{
       // document.getElementById("g").textContent = "no data saved before";
-    // }
+    }
 
     // if (req.status != 200){
     //   alert("Something Went Wrong! Probably Network Error");
