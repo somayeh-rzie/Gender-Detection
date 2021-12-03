@@ -26,10 +26,16 @@ function search(){
 
     //check local storage
     if(localStorage.getItem(uname)){
+      document.getElementById("saved-answer").textContent = "Saved Answer";
       document.getElementById("g").textContent = localStorage.getItem(uname);
     }else{
       document.getElementById("g").textContent = "no data saved before";
     }
+
+    // if (req.status != 200){
+    //   alert("Something Went Wrong! Probably Network Error");
+    //   return
+    // }
 
 
     //check response is empty or not
@@ -42,7 +48,14 @@ function search(){
     }
   };
 
-  req.send(null);
+  //handle network error
+  try{
+    req.send(null);
+  } catch(exception){
+    if(exception.name == 'NetworkError'){
+      alert('There was a network error.');
+   }
+  }
 }
 
 
