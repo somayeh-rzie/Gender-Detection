@@ -1,0 +1,47 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <link rel="stylesheet" type="text/css" href="style.css">  
+    <script type="text/javascript" src="script.js"></script>
+    </head>  
+  <body>  
+
+    <div class="box">
+      <div class="first">
+        <h1>Mr.? or Ms.? </h1>
+        <!-- checks input should be alphabets and spaces -->
+          <label for="name">Name
+          <input type="text" id="name" name="name" maxlength="255" size="12" 
+          onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)">
+          </label>
+
+        <!-- same name for radio buttons to restrict user from choosing more than one -->
+        <div>
+          <input type="radio" name="g" id="male" checked>
+          <label for="male">male</label><br>
+
+          <input type="radio" name="g" id="female">
+          <label for="female">female</label><br>
+
+        </div>
+
+        <div>
+          <button type="Submit" onclick="search();">Submit</button>
+        </div>
+
+        <div>
+          <button type="Save" onclick="savedata()">Save</button>
+        </div>
+        
+      </div>
+      <div class="second">
+        <h1>Prediction</h1>
+        <p id="gender">gender</p>
+        <p id="percent">percent</p>  
+        <h4>Saved Answer</h4>   
+        <p id="g"></p>
+        <button onclick="cleardata()">Clear</button>
+      </div>
+    </div>
+  </body>  
+</html>  
