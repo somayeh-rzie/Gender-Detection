@@ -1,0 +1,50 @@
+/*Background image*/
+body{
+    background-image: url('images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Flex-box margins and style*/
+.box {
+    display: flex;
+    position:absolute;
+    border-radius: 30px;
+    text-align: center;
+    background-color: rgb(206, 224, 240);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    column-gap: 50px;
+    }
+
+/*First column of flex-box*/
+.first{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding:25px;
+    justify-content: center;
+}
+
+/*Second column of flex-box*/
+.second{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding:25px;
+}
+
+/*Style of name and radio buttons*/
+label {
+    font: 1rem 'Fira Sans', sans-serif;
+    margin: .4rem 0;
+}
+
+/*Styles of submit and save buttons*/
+button {
+    margin: .2rem 0;
+    width:55px;
+    height:20px;
+    text-align:center;
+}
