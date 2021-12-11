@@ -3,6 +3,7 @@
 <head>  
     <link rel="stylesheet" type="text/css" href="style.css">  
     <script type="text/javascript" src="script.js"></script>
+    <title>Mr? or Ms?</title>
     </head>  
   <body>  
 
@@ -17,20 +18,22 @@
 
         <!-- same name for radio buttons to restrict user from choosing more than one -->
         <div>
-          <input type="radio" name="g" id="male" checked>
-          <label for="male">male</label><br>
-
-          <input type="radio" name="g" id="female">
-          <label for="female">female</label><br>
+          <span class="radio">
+            <input type="radio" name="g" id="male" checked>male<br>
+          </span>
+          
+          <span class="radio">
+            <input type="radio" name="g" id="female">female</label><br>
+          </span>
 
         </div>
 
         <div>
-          <button type="Submit" onclick="search();">Submit</button>
+          <button type="Submit" id="submit" onclick="submitfunc();">Submit</button>
         </div>
 
         <div>
-          <button type="Save" onclick="savedata()">Save</button>
+          <button type="Save" onclick="savefunc()">Save</button>
         </div>
         
       </div>
@@ -40,7 +43,7 @@
         <p id="percent">percent</p>  
         <h1 id="saved-data"></h1>   
         <p id="g"></p>
-        <button onclick="cleardata()">Clear</button>
+        <button onclick="clearfunc()">Clear</button>
       </div>
     </div>
   </body>  
