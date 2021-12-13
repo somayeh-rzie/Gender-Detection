@@ -50,7 +50,7 @@ function submitfunc(){
       if(response.count>=100 && response.probability>=0.7){
         message.textContent = "Prediction Is Reliable";
       }else{
-        message.textContent = "I'm Not Sure About Prediction:["
+        message.textContent = "Not Sure About Prediction:["
       }
     }else{
       gender.textContent = "None";
@@ -65,7 +65,7 @@ function submitfunc(){
     req.send(null);
   } catch(exception){
     if(exception.name == 'NetworkError'){
-      alert('We recognized a network error!');
+      alert('We Recognized A Network Error!');
    }
   }
 }
