@@ -5,59 +5,91 @@ body{
     background-size: cover;
 }
 
-/*Flex-box margins and style*/
-.box {
+
+/*Flex box*/
+.row {
     display: flex;
+    grid-template-columns: 250px 250px;
+    grid-column-gap: 50px;
     position:absolute;
     text-align: center;
+    border: black;
+    border-style: solid;
     border-radius: 25px;
-    background-color: rgb(222, 223, 227, 0.3);
+    background-color: rgb(222, 223, 227, 0.4);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    column-gap: 50px;
-    }
-
-/*First column of flex-box*/
-.first{
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    padding:25px;
-    justify-content: center;
-    border: 10px;
-    border-color: black;
-}
-
-/*Second column of flex-box*/
-.second{
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    padding:25px;
+    column-gap: 25px;
 }
 
 
-/*Style of radio buttons*/
-.radio{
-    margin: .8rem 0;
+/*First and second column style*/
+.column{
+    justify-content: left;
+    text-align: left;
+    padding: 25px;
 }
 
 
 /*Style of name*/
 label {
     font: 1rem 'Fira Sans', sans-serif;
-    margin: .2rem 0;
-    display: inline-block;
 }
+
+/*Input text of name style*/
+input[type="text" i] {
+    background: rgb(222, 223, 227, 0.6);
+    border: rgb(222, 223, 227, 0.6);
+    width: 60%;
+    padding: 4px 10px;
+    border-radius: 25px;
+}
+
 
 /*Styles of submit and save buttons*/
 button {
+    font-family: sans-serif;
     margin: .2rem 0;
     width: 100%;
     height:25px;
     background-color: rgb(222, 223, 227, 0.6);
     color: black;
-    border-radius: 4px;
+    border-radius: 25px;
+    border-top: black;
     text-align:center;
+}
+
+
+/*Message style*/
+textarea{
+    background-color: rgba(15, 15, 15, 0.3);
+    border-color: rgb(73, 73, 73);
+    border-radius: 25px;
+    margin-top: 7px;
+    -webkit-border-radius: 25px;
+    /*for mozilla firefox*/
+    -moz-border-radius: 25px;
+    /*for other browsers*/
+    border-radius: 25px;
+    height: 22px;
+    width: 98%;
+    padding-top: 8px;
+    /*font of message*/
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size:small;
+    /*hiding resize and scroll option of textarea*/
+    resize: none;
+    overflow: hidden;
+}
+
+.saved{
+    font-size: medium;
+}
+
+
+.radio-button{
+    padding:16px;
 }

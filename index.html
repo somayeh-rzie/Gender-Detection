@@ -7,43 +7,39 @@
     </head>  
   <body>  
 
-    <div class="box">
-      <div class="first">
+    <div class="row">
+      <div class="column">
         <h1>Mr.? or Ms.? </h1>
         <!-- checks input should be alphabets and spaces -->
           <label for="name">Name
-          <input type="text" id="name" name="name" maxlength="255" size="12" 
+          <input placeholder="Example: John" type="text" id="name" name="name" maxlength="255" size="12" 
           onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)">
           </label>
 
         <!-- same name for radio buttons to restrict user from choosing more than one -->
-        <div>
-          <span class="radio">
-            <input type="radio" name="g" id="male" checked>male<br>
-          </span>
-          
-          <span class="radio">
-            <input type="radio" name="g" id="female">female</label><br>
-          </span>
-
+        <div class="radio-button">
+          <input type="radio" name="g" id="male">male<br>
+          <input type="radio" name="g" id="female">female</label><br>
         </div>
 
-        <div>
+        <textarea id="message">I Show Messages :]</textarea>
+
+        <div class="button">
           <button type="Submit" id="submit" onclick="submitfunc();">Submit</button>
-        </div>
-
-        <div>
           <button type="Save" onclick="savefunc()">Save</button>
         </div>
         
       </div>
-      <div class="second">
+      <div class="column">
         <h1>Prediction</h1>
         <p id="gender">gender</p>
         <p id="percent">percent</p>  
-        <h1 id="saved-data"></h1>   
-        <p id="g"></p>
-        <button onclick="clearfunc()">Clear</button>
+        <p id="count">count</p> 
+        <p><br></p>
+        <div class = "saved">
+          <p id="saved-answer">saved data</p>
+        </div>
+        <button id= "clear" onclick="clearfunc()">Clear Saved Data</button>
       </div>
     </div>
   </body>  

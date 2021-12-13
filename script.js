@@ -16,6 +16,11 @@ function submitfunc(){
 
 
   var uname = document.getElementById("name").value;
+  message = document.getElementById("message");
+  gender = document.getElementById("gender");
+  percent = document.getElementById("percent");
+  count = document.getElementById("count");
+
 
   url.searchParams.set("name", uname);
 
@@ -33,18 +38,25 @@ function submitfunc(){
 
     //check local storage
     if(localStorage.getItem(uname)){
-      document.getElementById("saved-data").textContent = "Saved Answer";
-      document.getElementById("g").textContent = localStorage.getItem(uname);
+      document.getElementById("saved-answer").textContent = "you saved " + localStorage.getItem(uname) + " for " + uname;
     }
 
 
     //check response is empty or not
     if(response.gender && response.probability){
-      document.getElementById("gender").textContent = response.gender;
-      document.getElementById("percent").textContent = response.probability;
+      gender.textContent = response.gender;
+      percent.textContent = (response.probability*100) + "%";
+      count.textContent = response.count + " people";
+      if(response.count>=100 && response.probability>=0.7){
+        message.textContent = "Prediction Is Reliable";
+      }else{
+        message.textContent = "I'm Not Sure About Prediction:["
+      }
     }else{
-      document.getElementById("gender").textContent = "Sorry! We Couldn't Predict Your Gender";
-      document.getElementById("percent").textContent = "";
+      gender.textContent = "None";
+      percent.textContent = "None";
+      count.textContent = "None";
+      message.textContent = "Sorry! There's No Prediction";
     }
   };
 
