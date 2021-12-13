@@ -50,7 +50,7 @@ function submitfunc(){
       if(response.count>=100 && response.probability>=0.7){
         message.textContent = "Prediction Is Reliable";
       }else{
-        message.textContent = "Not A Reliable Prediction:["
+        message.textContent = "Non-Reliable Prediction:["
       }
     }else{
       gender.textContent = "None";
