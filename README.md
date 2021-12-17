@@ -12,8 +12,8 @@ We were not allowed to use any libraries or frameworks in this project therefore
 <br /><br />
 
 # Built With
-HTML, CSS, JavaScript
-<br /><br />
+- HTML, CSS
+- [JavaScript](https://www.javascript.com/) <br /><br />
 
 # License
 Distributed under the MIT License. See `LICENSE.txt` for more information
